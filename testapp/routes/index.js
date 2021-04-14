@@ -12,7 +12,7 @@ app.use(express.urlencoded({extended: true}));
 
 app.set('view engine', 'ejs');
 
-var task = ["Ride ferris wheel", "Get freeze dried ice cream sandwich from the camping section"];
+var task = ["Get everyone at the office to say 100%", "Ride ferris wheel", "Get freeze dried ice cream sandwich from the camping section"];
 //post route for adding new task
 app.post('/addtask', function (req, res) {
     var newTask = req.body.newtask;
