@@ -1,0 +1,57 @@
+<html>
+<head>
+    <style>
+        img {
+            width: 100px;
+            float: left;
+            margin-top: 5px;
+            margin-right: 5px;
+        }
+
+        h2 {
+            padding-bottom: 5 px;
+            font-family: 'Roboto Condensed', sans-serif;
+            letter-spacing: .1rem;
+            font-size: 1.5rem;
+        }
+        body {
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+        button {
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+        input {
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+    </style>
+
+   
+  </head>
+<body>
+
+    <img src="https://www.scheels.com/on/demandware.static/Sites-scheels-Site/-/default/dwfa2b7130/images/logo-center.svg" alt="Scheels Logo">
+    <title> Scheels ToDo</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+
+
+  <div class="container">
+<h2> TODO LIST</h2>
+<form action ="/addtask" method="POST">
+       <input type="text" name="newtask" placeholder="add new task">        <button> Add Task </button>
+<h2> ADDED TASK </h2>
+   <% for( var i = 0; i < task.length; i++){ %>
+<li><input type="checkbox" name="check" value="<%= task[i] %>" /> <%= task[i] %> </li>
+<% } %>
+
+<button formaction="/removetask" type="submit"> Complete </button>
+
+</form>
+<h2> COMPLETED TASK </h2>
+    <% for(var i = 0; i < complete.length; i++){ %>
+      <li><input type="checkbox" checked><%= complete[i] %> </li>
+<% } %>
+</div>
+</body>
+</html>
