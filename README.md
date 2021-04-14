@@ -7,4 +7,7 @@ This is an app I created in about an hour and a half to demonstrate node.js. Bas
 
 ## How to run
 
-Go to the directory in command prompt and run `node app.js`
+1. Go to the repository main directory in command prompt and run `npm install`
+2. Command prompt run `cd testapp`
+3. Command prompt run `node app.js`
+4. Go to  [http://localhost:3000/](http://localhost:3000/)
